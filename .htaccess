@@ -2,7 +2,6 @@
 	RewriteEngine On
 	RewriteRule ^/?$ application/controller/index.php [NC,L]
 	RewriteRule ^home/?$ application/controller/index.php [NC,L]
-	RewriteRule ^ajax/?$ application/controller/ajax.php [NC,L]
 
 	RewriteRule ^event/?$ application/controller/event.php [NC,L]
 	RewriteRule ^configure-event/?$ application/controller/configure_event.php [NC,L]
