@@ -158,7 +158,7 @@ $(document).ready(function(){
 				});
 
 				// Now submit the form using ajax
-				$("#form").find("input[type=submit]").on("click", function(event) {
+				$("#form").submit(function(event) {
 					event.preventDefault();
 					//fx.boxout(event);
 					submitEventForm($("#form"));
