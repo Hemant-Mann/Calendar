@@ -16,7 +16,7 @@
 
   function __autoload($class_name) {
   	$class_name = strtolower($class_name);
-    $path = MODEL.DS."class.{$class_name}.php";
+    $path = MODEL."class.{$class_name}.php";
     if(file_exists($path)) {
       require_once($path);
     } else {
@@ -25,12 +25,12 @@
   }
 
   function render($file) {
-    include(VIEW.DS.$file);
+    include(VIEW.$file);
   }
 
   function include_layout_template($template = "", $data = array()) {
     extract($data);
-    include(VIEW.DS.'layouts'.DS.$template.'.php');
+    include(VIEW.'layouts'.DS.$template.'.php');
   }
 
   function datetime_to_text($datetime="") {

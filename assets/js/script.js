@@ -160,7 +160,7 @@ $(document).ready(function(){
 				// Now submit the form using ajax
 				$("#form").submit(function(event) {
 					event.preventDefault();
-					//fx.boxout(event);
+					
 					submitEventForm($("#form"));
 					
 					$(".modal-window,.modal-overlay").remove();
@@ -175,8 +175,7 @@ $(document).ready(function(){
 	// Submitting the event form using ajax
 	function submitEventForm(selector) {
 		var url = selector.attr("action"),
-			formData = selector.serialize(),
-			submit = false;
+			formData = selector.serialize();
 
 		formData = formData + "&submit=true";
 		// Sends the data to the processing file
@@ -260,12 +259,12 @@ $(document).ready(function(){
 	});
 
 	// Fire ajax when navigation links are clicked
+	
 	$("#goLeft").on("click", function(event) {
 		event.preventDefault();
 		linksAjax("goLeft");
 	});
 
-	// Fire ajax when navigation links are clicked
 	$("#goRight").on("click", function(event) {
 		event.preventDefault();
 		linksAjax("goRight");
