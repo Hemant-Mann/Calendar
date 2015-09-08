@@ -1,5 +1,10 @@
 // Makes sure the document is ready before executing scripts
+var pageUrl = window.location;
+var pathname = pageUrl.pathname;
+var home = pathname.split("/")[1];
+home = "/" + home;
 $(document).ready(function(){
+    
 	// Functions to manipulate the modal window
 	var fx = {
 		// Checks for a modal window and returns it, or
@@ -60,7 +65,7 @@ $(document).ready(function(){
 	function renderCal(month, year) {
 		$.ajax({
 			type: "GET",
-			url: "/calendar/home",
+			url: home + "/home",
 			// Pass in the month and year to the url
 			data: { month: month, year: year }
 		})
